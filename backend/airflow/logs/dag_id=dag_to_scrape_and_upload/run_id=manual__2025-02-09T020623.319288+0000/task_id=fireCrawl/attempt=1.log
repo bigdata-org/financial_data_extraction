@@ -1,0 +1,22 @@
+[2025-02-09T02:06:25.048+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T02:06:25.073+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_to_scrape_and_upload.fireCrawl manual__2025-02-09T02:06:23.319288+00:00 [queued]>
+[2025-02-09T02:06:25.084+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_to_scrape_and_upload.fireCrawl manual__2025-02-09T02:06:23.319288+00:00 [queued]>
+[2025-02-09T02:06:25.085+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-09T02:06:25.103+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fireCrawl> on 2025-02-09 02:06:23.319288+00:00
+[2025-02-09T02:06:25.114+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=647) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T02:06:25.116+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_to_scrape_and_upload', 'fireCrawl', 'manual__2025-02-09T02:06:23.319288+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/scrape_upload_dag.py', '--cfg-path', '/tmp/tmpyc53wa3y']
+[2025-02-09T02:06:25.117+0000] {standard_task_runner.py:72} INFO - Started process 648 to run task
+[2025-02-09T02:06:25.117+0000] {standard_task_runner.py:105} INFO - Job 35: Subtask fireCrawl
+[2025-02-09T02:06:25.177+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_to_scrape_and_upload.fireCrawl manual__2025-02-09T02:06:23.319288+00:00 [running]> on host a99400d99a85
+[2025-02-09T02:06:25.294+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_to_scrape_and_upload' AIRFLOW_CTX_TASK_ID='fireCrawl' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T02:06:23.319288+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T02:06:23.319288+00:00'
+[2025-02-09T02:06:25.296+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T02:06:27.464+0000] {logging_mixin.py:190} INFO - s3scrapper
+[2025-02-09T02:06:27.465+0000] {logging_mixin.py:190} INFO - AKIASBGQLOUGU4LBU7PD
+[2025-02-09T02:06:27.469+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-09T02:06:27.497+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T02:06:27.498+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_to_scrape_and_upload, task_id=fireCrawl, run_id=manual__2025-02-09T02:06:23.319288+00:00, execution_date=20250209T020623, start_date=20250209T020625, end_date=20250209T020627
+[2025-02-09T02:06:27.569+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T02:06:27.590+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T02:06:27.594+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

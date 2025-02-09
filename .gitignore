@@ -1,0 +1,6 @@
+.venv
+.env
+/BS
+/exracto
+__pycache__
+.vscode
