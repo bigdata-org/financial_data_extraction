@@ -9,7 +9,9 @@ from utils.aws import s3
 from io import BytesIO
 import zipfile
 import requests 
-import time 
+import time
+from boto3.s3.transfer import TransferConfig
+from botocore.config import Config
 
 
 load_dotenv()
@@ -62,7 +64,7 @@ def get_links(web_link = "https://www.sec.gov/data-research/sec-markets-data/fin
 
 def store_data_to_s3():
     headers = {
-        'User-Agent': 'Michigan State University bigdataintelligence@gmail.com',
+        'User-Agent': 'MIT  bigdata@gmail.com',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
         'Accept-Encoding': 'gzip, deflate, br',
         'Accept-Language': 'en-US,en;q=0.9',
@@ -84,25 +86,39 @@ def store_data_to_s3():
     zip_link = json_data[year][qtr]
     try :
         time.sleep(0.15)
-        zip_response = requests.get(zip_link,stream=True,headers=headers)
-        zip_buffer = BytesIO(zip_response.content)
-        
-        temp_folder =f"sec_data/year={year}/qtr={qtr}/"
 
-        with zipfile.ZipFile(zip_buffer) as zip:
-            for file_name in zip.namelist():
-                file_data = zip.read(file_name)
-                
-                s3_key = f"{temp_folder}{file_name.split('.')[0]}.tsv"
-                s3_client.put_object(
-                    Bucket = bucket_name,
-                    Key = s3_key,
-                    Body =file_data
-                )
-                print(f"uploaded file {file_name}")
+        with requests.get(zip_link,stream=True,headers=headers) as zip_response:
+          
+            zip_buffer = BytesIO()
+            for chunk in zip_response.iter_content(chunk_size=8 * 1024 * 1024):
+                zip_buffer.write(chunk)
+            zip_buffer.seek(0)
+            
+            temp_folder =f"sec_data/year={year}/qtr={qtr}/"
+
+            config = TransferConfig(
+                            multipart_threshold=8 * 1024* 1024,
+                            max_concurrency=5,
+                            multipart_chunksize=8 * 1024* 1024,
+                            use_threads=True
+                            )
+
+            with zipfile.ZipFile(zip_buffer, 'r') as zip:
+                for file_name in zip.namelist():
+                   with zip.open(file_name) as file_obj:
+                    s3_key = f"{temp_folder}{file_name.split('.')[0]}.tsv"
+                 
+                    s3_client.upload_fileobj(
+                        Fileobj =file_obj,
+                        Bucket = bucket_name,
+                        Key = s3_key,
+                        Config = config
+                    )
+                    print(f"uploaded file {file_name}")
+        return "success"
 
     except Exception as e:
-        print({"error":str(e)})
+            print({"error":str(e)})
 
 
 
