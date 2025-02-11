@@ -1,0 +1,27 @@
+[2025-02-11T16:11:38.450+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-11T16:11:38.469+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_to_scrape_and_upload.test_dbt_curl manual__2025-02-11T11:11:33-05:00 [queued]>
+[2025-02-11T16:11:38.477+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_to_scrape_and_upload.test_dbt_curl manual__2025-02-11T11:11:33-05:00 [queued]>
+[2025-02-11T16:11:38.478+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-11T16:11:38.492+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): test_dbt_curl> on 2025-02-11 16:11:33+00:00
+[2025-02-11T16:11:38.501+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=271) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-11T16:11:38.502+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_to_scrape_and_upload', 'test_dbt_curl', 'manual__2025-02-11T11:11:33-05:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/scrape_upload_dag.py', '--cfg-path', '/tmp/tmpduvye55g']
+[2025-02-11T16:11:38.503+0000] {standard_task_runner.py:72} INFO - Started process 272 to run task
+[2025-02-11T16:11:38.503+0000] {standard_task_runner.py:105} INFO - Job 106: Subtask test_dbt_curl
+[2025-02-11T16:11:38.549+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_to_scrape_and_upload.test_dbt_curl manual__2025-02-11T11:11:33-05:00 [running]> on host ecdf8258250e
+[2025-02-11T16:11:38.656+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_to_scrape_and_upload' AIRFLOW_CTX_TASK_ID='test_dbt_curl' AIRFLOW_CTX_EXECUTION_DATE='2025-02-11T16:11:33+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-11T11:11:33-05:00'
+[2025-02-11T16:11:38.658+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-11T16:11:38.709+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-11T16:11:38.722+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n   curl -X POST "https://bn544.us1.dbt.com/api/v2/accounts/70471823424708/jobs/70471823425377/run/"         -H "Authorization: Token dbtu_aSKjCT4DBp7NVMX7ZIOj9Meosndn7W8Y2pD3K--X3a-v_pArxA"         -H "Content-Type: application/json"         -d @- << \'EOF\'\n{\n    "cause": "Triggered via API",\n    "steps_override": ["dbt run --select raw.sub --vars \'{"year":"2024","qtr":"3"}\'"]\n}\nEOF\n    ']
+[2025-02-11T16:11:38.738+0000] {subprocess.py:99} INFO - Output:
+[2025-02-11T16:11:38.764+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-02-11T16:11:38.765+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-02-11T16:11:39.306+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   348  100   228  100   120    420    221 --:--:-- --:--:-- --:--:--   642
+[2025-02-11T16:11:39.308+0000] {subprocess.py:106} INFO - {"status":{"code":400,"is_success":false,"user_message":"The request body was not valid JSON.","developer_message":"JSON parse error - Expecting ',' delimiter: line 1 column 94 (char 93)"},"data":{},"extra":{},"error_code":null}
+[2025-02-11T16:11:39.310+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-11T16:11:39.347+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-11T16:11:39.349+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_to_scrape_and_upload, task_id=test_dbt_curl, run_id=manual__2025-02-11T11:11:33-05:00, execution_date=20250211T161133, start_date=20250211T161138, end_date=20250211T161139
+[2025-02-11T16:11:39.401+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-11T16:11:39.416+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-11T16:11:39.419+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

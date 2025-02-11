@@ -2,9 +2,9 @@ import os
 from dotenv import load_dotenv
 import json
 from utils.aws import s3
+from utils.snowflake.snowflake_connector import conn
 from io import BytesIO
 import requests
-from firecrawl import FirecrawlApp
 import zipfile
 import time 
 
@@ -37,9 +37,7 @@ def test():
         time.sleep(0.15)
         zip_response = requests.get(zip_link,stream=True,headers=headers)
         # zip_response.raise_for_status()
-
         zip_buffer = BytesIO(zip_response.content)
-
         # if not zipfile.is_zipfile(zipfile):
         #     print("invalid")
 
@@ -60,7 +58,75 @@ def test():
     except Exception as e:
         print({"error":str(e)})
 
+# def test_sf(year, qtr):
+#     bucket_name  =os.getenv('S3_BUCKET_NAME')
+#     files_path =f"dumps/year" 
+#     cur = conn.cursor()
+
+#     cur.execute("select current_user")
+
+#     sql_create_tsv_format  =  """
+#                                 CREATE FILE FORMAT IF NOT EXISTS sec_tsv_format 
+#                                 TYPE = 'CSV' 
+#                                 FIELD_DELIMITER = '\t'  -- Tab delimiter for TSV
+#                                 SKIP_HEADER = 1         -- Skip the first row (header) if needed
+#                                 FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+                            
+#                               """
+#     sql_create_external_stage = f"""
+#                                 CREATE STAGE IF NOT EXISTS sec_s3_stage
+#                                 URL = 's3://{bucket_name}/sec_data/'  
+#                                 FILE_FORMAT = sec_tsv_format         
+#                                 CREDENTIALS = (
+#                                     AWS_KEY_ID = '{os.getenv('ACCESS_KEY')}' 
+#                                     AWS_SECRET_KEY = '{os.getenv('SECRET_ACCESS_KEY')}'
+#                                 );
+#                                 """
+
+#     try:
+#         cur.execute(sql_create_tsv_format)
+#         print("successfully created format for TSV file")
+
+#         cur.execute(sql_create_external_stage)
+#         print("successfully created s3_stage")
+
+#     except Exception as e :
+#         print(str(e))
+
+#     cur.close()
+#     conn.close()
+
+
+# from fastapi import FastAPI, HTTPException
+# import requests
+# import os
+
+# app = FastAPI()
+
+# # Airflow API Configuration
+# AIRFLOW_BASE_URL = "http://localhost:8081/api/v1"  # Update if running on a server
+# USERNAME = "airflow"  # Default username
+# PASSWORD = "airflow"  # Default password
+# DAG_ID = "dag_to_scrape_and_upload"  # Replace with your DAG ID
+
+# @app.post("/trigger-dag/{dag_id}")
+# def trigger_dag(dag_id: str):
+#     """Trigger an Airflow DAG using the REST API."""
+#     url = f"{AIRFLOW_BASE_URL}/dags/{dag_id}/dagRuns"
+
+#     response = requests.post(
+#         url,
+#         auth=(USERNAME, PASSWORD),
+#         headers={"Content-Type": "application/json"},
+#         json={"conf": {}}  # Optional: Add DAG run config params
+#     )
+
+#     if response.status_code in [200, 201]:  # 201 = Created, 200 = Success
+#         return {"message": f"DAG {dag_id} triggered successfully!", "response": response.json()}
+#     else:
+#         raise HTTPException(status_code=response.status_code, detail=response.json())
+
 
 
 if __name__ == "__main__":
-    test()
+    test(2024,4)
