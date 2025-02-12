@@ -64,8 +64,7 @@ def store_data_to_s3(**context):
     year = ti.xcom_pull(task_ids='Check_if_data_exists', key='year')
     qtr = ti.xcom_pull(task_ids='Check_if_data_exists', key='qtr')
 
-    print(f"pulling to XCom - Year: {year}, Quarter: {qtr}")
-
+    
 
     if year is None:
         year = context['params']['year']

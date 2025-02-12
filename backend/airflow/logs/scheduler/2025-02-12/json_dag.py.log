@@ -1,0 +1,78 @@
+[2025-02-12T06:38:23.728+0000] {processor.py:186} INFO - Started process (PID=3030) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:38:23.730+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:38:23.732+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:23.732+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:38:23.931+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:38:24.065+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.064+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:dag_for_dbt_json
+[2025-02-12T06:38:24.078+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.077+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:dag_for_dbt_json
+[2025-02-12T06:38:24.086+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.086+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:dag_for_dbt_json
+[2025-02-12T06:38:24.097+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.096+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:dag_for_dbt_json
+[2025-02-12T06:38:24.105+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.105+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:dag_for_dbt_json
+[2025-02-12T06:38:24.113+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.113+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:dag_for_dbt_json
+[2025-02-12T06:38:24.120+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.120+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:dag_for_dbt_json
+[2025-02-12T06:38:24.122+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.121+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:38:24.139+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.139+0000] {dag.py:3262} INFO - Creating ORM DAG for dag_for_dbt_json
+[2025-02-12T06:38:24.155+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:24.154+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:38:24.176+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.453 seconds
+[2025-02-12T06:38:54.447+0000] {processor.py:186} INFO - Started process (PID=3041) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:38:54.449+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:38:54.453+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:54.452+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:38:54.731+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:38:54.769+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:54.769+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:38:54.797+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:38:54.797+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:38:54.821+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.385 seconds
+[2025-02-12T06:39:24.881+0000] {processor.py:186} INFO - Started process (PID=3052) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:39:24.882+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:39:24.884+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:39:24.883+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:39:25.023+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:39:25.049+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:39:25.048+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:39:25.068+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:39:25.068+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:39:25.088+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.213 seconds
+[2025-02-12T06:39:55.192+0000] {processor.py:186} INFO - Started process (PID=3063) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:39:55.193+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:39:55.195+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:39:55.194+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:39:55.366+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:39:55.395+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:39:55.395+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:39:55.419+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:39:55.419+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:39:55.437+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.253 seconds
+[2025-02-12T06:40:26.071+0000] {processor.py:186} INFO - Started process (PID=3074) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:40:26.072+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:40:26.073+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:40:26.073+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:40:26.222+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:40:26.247+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:40:26.246+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:40:26.267+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:40:26.267+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:40:26.287+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.223 seconds
+[2025-02-12T06:40:57.093+0000] {processor.py:186} INFO - Started process (PID=3085) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:40:57.095+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:40:57.098+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:40:57.097+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:40:57.267+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:40:57.317+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:40:57.317+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:40:57.341+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:40:57.341+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:40:57.360+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.272 seconds
+[2025-02-12T06:41:27.443+0000] {processor.py:186} INFO - Started process (PID=3096) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:41:27.444+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:41:27.445+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:41:27.445+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:41:27.606+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:41:27.633+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:41:27.632+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:41:27.654+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:41:27.654+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:41:27.670+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.234 seconds
+[2025-02-12T06:41:57.971+0000] {processor.py:186} INFO - Started process (PID=3107) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:41:57.972+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:41:57.974+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:41:57.973+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:41:58.237+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:41:58.274+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:41:58.274+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:41:58.297+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:41:58.297+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:41:58.316+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.354 seconds
+[2025-02-12T06:42:29.043+0000] {processor.py:186} INFO - Started process (PID=3118) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:42:29.045+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:42:29.047+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:42:29.047+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:42:29.214+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:42:29.245+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:42:29.244+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:42:29.273+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:42:29.272+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:42:29.293+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.255 seconds
+[2025-02-12T06:42:59.563+0000] {processor.py:186} INFO - Started process (PID=3132) to work on /opt/airflow/dags/json_dag.py
+[2025-02-12T06:42:59.564+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/json_dag.py for tasks to queue
+[2025-02-12T06:42:59.565+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:42:59.565+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:42:59.726+0000] {processor.py:925} INFO - DAG(s) 'dag_for_dbt_json' retrieved from /opt/airflow/dags/json_dag.py
+[2025-02-12T06:42:59.752+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:42:59.752+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-12T06:42:59.774+0000] {logging_mixin.py:190} INFO - [2025-02-12T06:42:59.773+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_for_dbt_json to 2025-03-01 00:00:00+00:00, run_after=2025-04-01 00:00:00+00:00
+[2025-02-12T06:42:59.793+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/json_dag.py took 0.235 seconds

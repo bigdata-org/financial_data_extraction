@@ -5,21 +5,21 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator 
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
-from utils.main import check_if_file_exists
-from utils.main import store_data_to_s3
+from utils import main
+
 
 
 load_dotenv()
 with DAG(
-    dag_id='dag_for_dbt_raw',
-    description='dag to call dbt for raw data',
+    dag_id='dag_for_dbt_json',
+    description='dag to call dbt for json data',
     start_date=datetime(2025,2,7),
     schedule_interval='@monthly'
 ) as dag :
     
     check_data_exists = BranchPythonOperator(
         task_id='Check_if_data_exists',
-        python_callable=check_if_file_exists,
+        python_callable=main.check_if_file_exists,
         params={
             'year' : '2024',
             'qtr'  : '1'
@@ -28,26 +28,19 @@ with DAG(
 
     upload_data_to_s3 = PythonOperator(
         task_id='Upload_data_to_s3',
-        python_callable=store_data_to_s3,
+        python_callable=main.store_data_to_s3,
         params={
             'year': '2024',  # Default value
             'qtr' : '4'       # Default value
         }
     )
 
-    dbt_raw = BashOperator(
-    task_id="dbt_curl_command",
+    dbt_json = BashOperator(
+    task_id="dbt_json_command",
     bash_command="""
-  curl -X POST "https://bn544.us1.dbt.com/api/v2/accounts/70471823424708/jobs/70471823425377/run/" \
-    -H "Authorization: Token dbtu_aSKjCT4DBp7NVMX7ZIOj9Meosndn7W8Y2pD3K--X3a-v_pArxA" \
-    -H "Content-Type: application/json" \
-    -d '{
-        "cause": "Triggered via API",
-        "steps_override": [
-        "dbt run --select raw.sub --vars \\"{\\"year\\": \\"{{ params.year }}\\", \\"qtr\\": \\"{{ params.qtr }}\\"}\\""
-        ]
-    }'
-    """,
+  
+
+          """,
     params={
         'year': '2024',
         'qtr': '2'
@@ -59,9 +52,9 @@ with DAG(
         trigger_rule='none_failed'
     )
 
-    check_data_exists >> [upload_data_to_s3, dbt_raw]
+    check_data_exists >> [upload_data_to_s3, dbt_json]
     upload_data_to_s3 >> join
-    dbt_raw >> join
+    dbt_json >> join
     
     
 
