@@ -1,28 +1,37 @@
 from airflow import DAG
 from datetime import datetime, timedelta
-from airflow.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator, BranchPythonOperator
 from airflow.operators.bash import BashOperator
+from airflow.operators.empty import EmptyOperator 
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
 from utils import main
 
 
+
 load_dotenv()
-
-
 with DAG(
     dag_id='dag_for_dbt_raw',
     description='dag to call dbt for raw data',
     start_date=datetime(2025,2,7),
-    schedule_interval='@daily'
+    schedule_interval='@monthly'
 ) as dag :
+    
+    check_data_exists = BranchPythonOperator(
+        task_id='Check_if_data_exists',
+        python_callable=main.check_if_file_exists,
+        params={
+            'year' : '2024',
+            'qtr'  : '1'
+        }
+    )
 
     upload_data_to_s3 = PythonOperator(
         task_id='Upload_data_to_s3',
         python_callable=main.store_data_to_s3,
         params={
             'year': '2024',  # Default value
-            'qtr': '4'       # Default value
+            'qtr' : '4'       # Default value
         }
     )
 
@@ -34,7 +43,9 @@ with DAG(
     -H "Content-Type: application/json" \
     -d '{
         "cause": "Triggered via API",
-        "steps_override": ["dbt run --select raw.sub --vars \\"{\\"year\\": \\"{{ params.year }}\\", \\"qtr\\": \\"{{ params.qtr }}\\"}"]
+        "steps_override": [
+        "dbt run --select raw.sub --vars \\"{\\"year\\": \\"{{ params.year }}\\", \\"qtr\\": \\"{{ params.qtr }}\\"}\\""
+        ]
     }'
     """,
     params={
@@ -43,7 +54,15 @@ with DAG(
     }
     )
 
+    join = EmptyOperator(
+        task_id='join',
+        trigger_rule='none_failed'
+    )
 
-    upload_data_to_s3 >> dbt_raw    
+    check_data_exists >> [upload_data_to_s3, dbt_raw]
+    upload_data_to_s3 >> join
+    dbt_raw >> join
+    
+    
 
     

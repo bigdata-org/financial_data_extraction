@@ -12,6 +12,9 @@ from boto3.s3.transfer import TransferConfig
 from botocore.config import Config
 
 
+load_dotenv()
+
+bucket_name = os.getenv('S3_BUCKET_NAME')
 
 # get all zip link and store them to s3 
 def get_links(web_link = "https://www.sec.gov/data-research/sec-markets-data/financial-statement-data-sets"):
@@ -54,9 +57,23 @@ def get_links(web_link = "https://www.sec.gov/data-research/sec-markets-data/fin
 # get files from zip folder and upload them to s3
 def store_data_to_s3(**context):
 
-    params = context['params']
-    year = params.get('year', '2023')  # Default year
-    qtr = params.get('qtr', '3') 
+    # year = context['params'].get('year','2024')
+    # qtr = context['params'].get('qtr','4')
+
+    ti = context['task_instance']
+    year = ti.xcom_pull(task_ids='Check_if_data_exists', key='year')
+    qtr = ti.xcom_pull(task_ids='Check_if_data_exists', key='qtr')
+
+    print(f"pulling to XCom - Year: {year}, Quarter: {qtr}")
+
+
+    if year is None:
+        year = context['params']['year']
+    if qtr is None:
+        qtr = context['params']['qtr']
+
+    # year = params.get('year', '2023')  # Default year
+    # qtr = params.get('qtr', '3') 
 
     headers = {
         'User-Agent': 'MIT  bigdata@gmail.com',
@@ -67,8 +84,7 @@ def store_data_to_s3(**context):
         'Connection': 'keep-alive',
         'Referer': 'https://www.sec.gov/edgar/searchedgar/companysearch.html'
     }
-    # year = "2024"
-    # qtr = "4"
+  
     bucket_name = os.getenv('S3_BUCKET_NAME')
     region = os.getenv('REGION')
     s3_client = s3.get_s3_client()
@@ -80,7 +96,6 @@ def store_data_to_s3(**context):
     json_data = json.loads(data.content)
     zip_link = json_data[year][qtr]
     try :
-        # time.sleep(0.15)
         with requests.get(zip_link,stream=True,headers=headers) as zip_response:      
             zip_buffer = BytesIO()
             for chunk in zip_response.iter_content(chunk_size=8 * 1024 * 1024):
@@ -112,3 +127,30 @@ def store_data_to_s3(**context):
 
     except Exception as e:
             print({"error":str(e)})
+
+
+def check_if_file_exists(**context):
+    year = context['params'].get('year','2024')
+    qtr = context['params'].get('qtr','4')
+
+    ti = context['task_instance']
+    ti.xcom_push(key='year', value=year)
+    ti.xcom_push(key='qtr', value=qtr)
+    
+    print(f"Pushing to XCom - Year: {year}, Quarter: {qtr}")
+
+    s3_client = s3.get_s3_client()
+    response = s3_client.list_objects_v2(
+        Bucket=bucket_name,
+        Prefix=f'sec_data/{year}/{qtr}/'
+    )
+    Keys = [obj['Key'] for obj in response.get('Contents', [])]
+    file_count = len(Keys)
+
+    if file_count >= 4:
+        return 'dbt_curl_command'
+    return 'Upload_data_to_s3'
+
+
+
+    
