@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator 
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
-from utils import main
+from utils.main import store_data_to_s3, check_if_file_exists
 
 
 
@@ -19,7 +19,7 @@ with DAG(
     
     check_data_exists = BranchPythonOperator(
         task_id='Check_if_data_exists',
-        python_callable=main.check_if_file_exists,
+        python_callable=check_if_file_exists,
         params={
             'year' : '2024',
             'qtr'  : '1'
@@ -28,7 +28,7 @@ with DAG(
 
     upload_data_to_s3 = PythonOperator(
         task_id='Upload_data_to_s3',
-        python_callable=main.store_data_to_s3,
+        python_callable=store_data_to_s3,
         params={
             'year': '2024',  # Default value
             'qtr' : '4'       # Default value

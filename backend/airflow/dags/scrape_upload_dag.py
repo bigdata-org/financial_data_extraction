@@ -4,7 +4,7 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
-from utils import main
+from utils.main import store_data_to_s3
 
 
 load_dotenv()
@@ -19,7 +19,7 @@ with DAG(
 
     upload_datas3 = PythonOperator(
         task_id='Upload_data_to_s3',
-        python_callable=main.store_data_to_s3,
+        python_callable=store_data_to_s3,
         params={
             'year': '2024',  # Default value
             'qtr': '4'       # Default value

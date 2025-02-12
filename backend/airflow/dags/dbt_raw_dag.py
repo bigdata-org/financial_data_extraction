@@ -5,8 +5,7 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator 
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
-from utils.main import check_if_file_exists
-from utils.main import store_data_to_s3
+from utils.main import check_if_file_exists, store_data_to_s3
 
 
 load_dotenv()

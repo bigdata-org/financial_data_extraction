@@ -5,15 +5,14 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator 
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
-from utils.main import check_if_file_exists
-from utils.main import store_data_to_s3
+from utils.main import check_if_file_exists, store_data_to_s3
 
 
 
 load_dotenv()
 with DAG(
-    dag_id='dag_for_dbt_json',
-    description='dag to call dbt for json data',
+    dag_id='dag_for_dbt_denormalize',
+    description='dag to call dbt for denormalize data',
     start_date=datetime(2025,2,7),
     schedule_interval='@monthly'
 ) as dag :
@@ -37,7 +36,7 @@ with DAG(
     )
 
     dbt_json = BashOperator(
-    task_id="dbt_json_command",
+    task_id="dbt_denormalize_command",
     bash_command="""
   
 
