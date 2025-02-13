@@ -1,0 +1,5 @@
+.streamlit-venv
+.fastapi-venv
+__pycache__
+artifacts
+.env
