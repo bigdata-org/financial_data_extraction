@@ -1,13 +1,14 @@
-from snowflake.snowflake_connector import conn
+from snowflake_python.snowflake_connector  import conn
 from fastapi import FastAPI
 import pandas as pd
 from aws import s3
 import os 
+import uvicorn
 import requests
-from typing import Optional
+from dotenv import load_dotenv
 
 
-cur =   conn.cursor()
+load_dotenv()
 app = FastAPI()
 bucket_name = os.getenv('S3_BUCKET_NAME')
 
@@ -31,35 +32,53 @@ def check_data_availibility(year, qtr):
     return False 
 
 
-print(USERNAME)
-
 # get queried data
-@app.get("/user_query/{query}")
-def user_query(query):
-   
-#    if check_data_availibility(year, qtr) :   
-        cur.execute(query)
-        columns = [desc[0] for desc in cur.description]
-        data = cur.fetchall()
-        df = pd.DataFrame(data, columns=columns)
-        return {"status": "success", "data": df.to_dict(orient='records')}
-# except Exception as e:
-        # return {"status": "error", "message": str(e)}
+@app.get("/user_query/{query}/{year}/{qtr}/{schema}")
+def user_query(query:str,year, qtr,schema:str):
+    try:
+        if check_data_availibility(year, qtr):
+            cur = conn.cursor()
+            limit_query = query + " Limit 100" 
+            cur.execute(f"USE SCHEMA {conn.database}.{schema}")
+            cur.execute(limit_query)
+            
+            print(limit_query)
+            columns = [desc[0] for desc in cur.description]
+            data = cur.fetchall()
+
+            df = pd.DataFrame(data, columns=columns)
+            df = df.astype(str)  
+            
+            return {"status": "success", "data": df.to_dict(orient='records')}
+        else :  
+            return f"Run Airflow pipeline for {year} and {qtr}" 
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+    finally:
+        # Close cursor after use
+        if 'cur' in locals():
+            cur.close()
 
 
-@app.post("/trigger_dag/{dag_id}")
-def trigger_dag(dag_id: str):
+@app.post("/trigger_dag/{dag_id}/{year}/{qtr}")
+def trigger_dag(dag_id: str, year, qtr):
 
     url = f"{AIRFLOW_BASE_URL}/dags/{dag_id}/dagRuns"
     response = requests.post(
         url,
         auth=(USERNAME, PASSWORD),
-        headers={"Content-Type": "application/json"}
-        # json={"conf": {year,}}  
+        headers={"Content-Type": "application/json"},
+        json={
+            "conf": {
+                "year": year,
+                "qtr": qtr
+            }
+        }  
     )
     if response.status_code in [200, 201]:  # 201 = Created, 200 = Success
         return {"message": f"DAG {dag_id} triggered successfully!", "response": response.json()}
     else:
         raise Exception 
 
-    
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host="127.0.0.1", port=8081, reload=True)

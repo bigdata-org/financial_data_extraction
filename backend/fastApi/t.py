@@ -2,25 +2,36 @@ import os
 from dotenv import load_dotenv
 # from utils.aws import s3
 from io import BytesIO
-
-from firecrawl import FirecrawlApp
-from boto3.s3.transfer import TransferConfig
-from botocore.config import Config
-from snowflake.snowflake_connector import conn
+import snowflake.connector
 
 
+load_dotenv()
 
 bucket_name = os
-def test():
-    cur = conn.cursor()
-    cur.execute("select current_user")
 
-    for row in cur.fetchall():
-        print(row)
+async def test_connection():
+    try:
+        conn = snowflake.connector.connect(
+            user=os.getenv('SNOWFLAKE_USER'),
+            password=os.getenv('SNOWFLAKE_PASSWORD'),
+            account=os.getenv('SF_ACCOUNT'),
+            warehouse="DBT_WH",
+            database="SEC",
+            schema="RAW"
+        )
+        cur = conn.cursor()
+        cur.execute("SELECT CURRENT_USER()")
+        result = cur.fetchone()
+        cur.close()
+        conn.close()
+        return {"status": "success", "user": result[0]}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
 
 
 if __name__ == "__main__":
-    test()
+    test_connection()
 
 
 # # print(response.get('Contents', []))

@@ -1,8 +1,18 @@
 import streamlit as st
+import requests
+import pandas as pd
 
 
+api_basae_url ="https://fastapi-service-476858206005.us-central1.run.app/user_query"
 
+def call_api(query):
+    api_url = f"{api_basae_url}/select * from sub limit 100"
+    response = requests.get(api_url)
+    result = response.json()
+    df = pd.DataFrame(result['data'])
+    return df
 
+st.dataframe(call_api("s"))
 
 with st.form(key='my_form'):
     # Create a select box

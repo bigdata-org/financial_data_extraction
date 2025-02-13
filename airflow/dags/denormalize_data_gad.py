@@ -1,5 +1,5 @@
 from airflow import DAG
-from datetime import datetime, timedelta
+from datetime import datetime
 from airflow.operators.python import PythonOperator, BranchPythonOperator
 from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator 
@@ -54,7 +54,7 @@ with DAG(
         'qtr': '{{ task_instance.xcom_pull(key="qtr") }}'
     },
 
-    trigger_rule = 'all_success'   
+    trigger_rule = 'one_success'   
 
     )
 

@@ -52,7 +52,7 @@ with DAG(
         'year': '{{ task_instance.xcom_pull(key="year") }}',
         'qtr': '{{ task_instance.xcom_pull(key="qtr") }}'
         },
-        trigger_rule = 'all_success'
+        trigger_rule = 'one_success'
     )
 
     dbt_json = BashOperator(
