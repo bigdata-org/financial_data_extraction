@@ -1,0 +1,24 @@
+[2025-02-12T05:58:39.729+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T05:58:39.744+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_for_dbt_raw.Check_if_data_exists manual__2025-02-12T00:58:33-05:00 [queued]>
+[2025-02-12T05:58:39.753+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_for_dbt_raw.Check_if_data_exists manual__2025-02-12T00:58:33-05:00 [queued]>
+[2025-02-12T05:58:39.753+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T05:58:39.766+0000] {taskinstance.py:2889} INFO - Executing <Task(BranchPythonOperator): Check_if_data_exists> on 2025-02-12 05:58:33+00:00
+[2025-02-12T05:58:39.771+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1283) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T05:58:39.772+0000] {standard_task_runner.py:72} INFO - Started process 1284 to run task
+[2025-02-12T05:58:39.772+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_for_dbt_raw', 'Check_if_data_exists', 'manual__2025-02-12T00:58:33-05:00', '--job-id', '167', '--raw', '--subdir', 'DAGS_FOLDER/dbt_raw_dag.py', '--cfg-path', '/tmp/tmp897efj5m']
+[2025-02-12T05:58:39.774+0000] {standard_task_runner.py:105} INFO - Job 167: Subtask Check_if_data_exists
+[2025-02-12T05:58:39.848+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_for_dbt_raw.Check_if_data_exists manual__2025-02-12T00:58:33-05:00 [running]> on host 91e1ec71f461
+[2025-02-12T05:58:39.925+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_for_dbt_raw' AIRFLOW_CTX_TASK_ID='Check_if_data_exists' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T05:58:33+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T00:58:33-05:00'
+[2025-02-12T05:58:39.926+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T05:58:39.939+0000] {baseoperator.py:421} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2025-02-12T05:58:40.346+0000] {python.py:240} INFO - Done. Returned value was: Upload_data_to_s3
+[2025-02-12T05:58:40.347+0000] {branch.py:38} INFO - Branch into Upload_data_to_s3
+[2025-02-12T05:58:40.348+0000] {skipmixin.py:230} INFO - Following branch ('Upload_data_to_s3',)
+[2025-02-12T05:58:40.357+0000] {skipmixin.py:278} INFO - Skipping tasks [('dbt_curl_command', -1)]
+[2025-02-12T05:58:40.384+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T05:58:40.385+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_for_dbt_raw, task_id=Check_if_data_exists, run_id=manual__2025-02-12T00:58:33-05:00, execution_date=20250212T055833, start_date=20250212T055839, end_date=20250212T055840
+[2025-02-12T05:58:40.430+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-12T05:58:40.456+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T05:58:40.460+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

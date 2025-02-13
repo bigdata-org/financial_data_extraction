@@ -1,0 +1,99 @@
+[2025-02-12T06:27:48.778+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T06:27:48.797+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_for_dbt_raw.dbt_curl_command manual__2025-02-12T01:27:40-05:00 [queued]>
+[2025-02-12T06:27:48.808+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_for_dbt_raw.dbt_curl_command manual__2025-02-12T01:27:40-05:00 [queued]>
+[2025-02-12T06:27:48.808+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T06:27:48.823+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): dbt_curl_command> on 2025-02-12 06:27:40+00:00
+[2025-02-12T06:27:48.830+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1736) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T06:27:48.831+0000] {standard_task_runner.py:72} INFO - Started process 1737 to run task
+[2025-02-12T06:27:48.831+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_for_dbt_raw', 'dbt_curl_command', 'manual__2025-02-12T01:27:40-05:00', '--job-id', '178', '--raw', '--subdir', 'DAGS_FOLDER/dbt_raw_dag.py', '--cfg-path', '/tmp/tmpipevjz0m']
+[2025-02-12T06:27:48.833+0000] {standard_task_runner.py:105} INFO - Job 178: Subtask dbt_curl_command
+[2025-02-12T06:27:48.879+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_for_dbt_raw.dbt_curl_command manual__2025-02-12T01:27:40-05:00 [running]> on host 91e1ec71f461
+[2025-02-12T06:27:48.963+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_for_dbt_raw' AIRFLOW_CTX_TASK_ID='dbt_curl_command' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T06:27:40+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T01:27:40-05:00'
+[2025-02-12T06:27:48.964+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T06:27:48.976+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-12T06:27:48.983+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n  curl -X POST "https://bn544.us1.dbt.com/api/v2/accounts/70471823424708/jobs/70471823425377/run/"     -H "Authorization: Token dbtu_aSKjCT4DBp7NVMX7ZIOj9Meosndn7W8Y2pD3K--X3a-v_pArxA"     -H "Content-Type: application/json"     -d \'{\n        "cause": "Triggered via API",\n        "steps_override": [\n        "dbt run --select raw.sub --vars \'{"year": "2022", "qtr": "1"}\'"\n        ]\n    }\'\n    ']
+[2025-02-12T06:27:48.992+0000] {subprocess.py:99} INFO - Output:
+[2025-02-12T06:27:49.002+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-02-12T06:27:49.004+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-02-12T06:27:49.575+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   350  100   235  100   115    409    200 --:--:-- --:--:-- --:--:--   609
+[2025-02-12T06:27:49.577+0000] {subprocess.py:106} INFO - {"status":{"code":400,"is_success":false,"user_message":"The request body was not valid JSON.","developer_message":"JSON parse error - Unterminated string starting at: line 4 column 9 (char 76)"},"data":{},"extra":{},"error_code":null}curl: (3) URL using bad/illegal format or missing URL
+[2025-02-12T06:27:49.578+0000] {subprocess.py:106} INFO - curl: (3) URL using bad/illegal format or missing URL
+[2025-02-12T06:27:49.580+0000] {subprocess.py:106} INFO - curl: (3) unmatched close brace/bracket in URL position 2:
+[2025-02-12T06:27:49.581+0000] {subprocess.py:106} INFO - 1}"
+[2025-02-12T06:27:49.583+0000] {subprocess.py:106} INFO -         ]
+[2025-02-12T06:27:49.584+0000] {subprocess.py:106} INFO -     }
+[2025-02-12T06:27:49.585+0000] {subprocess.py:106} INFO -  ^
+[2025-02-12T06:27:49.586+0000] {subprocess.py:110} INFO - Command exited with return code 3
+[2025-02-12T06:27:49.601+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 3.
+[2025-02-12T06:27:49.615+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dag_for_dbt_raw, task_id=dbt_curl_command, run_id=manual__2025-02-12T01:27:40-05:00, execution_date=20250212T062740, start_date=20250212T062748, end_date=20250212T062749
+[2025-02-12T06:27:49.630+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T06:27:49.631+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 178 for task dbt_curl_command (Bash command failed. The command returned a non-zero exit code 3.; 1737)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 3.
+[2025-02-12T06:27:49.651+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-12T06:27:49.669+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T06:27:49.673+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

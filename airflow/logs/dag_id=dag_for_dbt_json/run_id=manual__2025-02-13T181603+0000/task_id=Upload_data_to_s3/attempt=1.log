@@ -1,0 +1,22 @@
+[2025-02-13T18:16:21.559+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-13T18:16:21.609+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_for_dbt_json.Upload_data_to_s3 manual__2025-02-13T18:16:03+00:00 [queued]>
+[2025-02-13T18:16:21.641+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_for_dbt_json.Upload_data_to_s3 manual__2025-02-13T18:16:03+00:00 [queued]>
+[2025-02-13T18:16:21.642+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-13T18:16:21.726+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): Upload_data_to_s3> on 2025-02-13 18:16:03+00:00
+[2025-02-13T18:16:21.743+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=483) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-13T18:16:21.747+0000] {standard_task_runner.py:72} INFO - Started process 484 to run task
+[2025-02-13T18:16:21.748+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_for_dbt_json', 'Upload_data_to_s3', 'manual__2025-02-13T18:16:03+00:00', '--job-id', '294', '--raw', '--subdir', 'DAGS_FOLDER/json_dag.py', '--cfg-path', '/tmp/tmpd09xvpdt']
+[2025-02-13T18:16:21.753+0000] {standard_task_runner.py:105} INFO - Job 294: Subtask Upload_data_to_s3
+[2025-02-13T18:16:21.861+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_for_dbt_json.Upload_data_to_s3 manual__2025-02-13T18:16:03+00:00 [running]> on host 02531b93d66a
+[2025-02-13T18:16:22.079+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_for_dbt_json' AIRFLOW_CTX_TASK_ID='Upload_data_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2025-02-13T18:16:03+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-13T18:16:03+00:00'
+[2025-02-13T18:16:22.083+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-13T18:16:32.288+0000] {logging_mixin.py:190} INFO - uploaded file sub.txt
+[2025-02-13T18:16:42.182+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-02-13T18:16:42.185+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-13T18:16:42.203+0000] {process_utils.py:132} INFO - Sending 15 to group 484. PIDs of all processes in the group: [484]
+[2025-02-13T18:16:42.205+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 484
+[2025-02-13T18:16:42.208+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-02-13T18:16:42.814+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-13T18:16:42.876+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=484, status='terminated', exitcode=0, started='18:16:21') (484) terminated with exit code 0
