@@ -1,37 +1,39 @@
 import streamlit as st
 import requests
 import pandas as pd
+import time
 
 # FastAPI Backend URL
 API_BASE_URL = "https://fastapi-service-476858206005.us-central1.run.app"
 
-# Function to fetch data from FastAPI
-def call_api(query, year, qtr, schema):
+# Function to fetch data from FastAPI with single attempt
+def call_api_once(query, year, qtr, schema):
     api_url = f"{API_BASE_URL}/user_query/{query}/{year}/{qtr}/{schema}"
+    loading_placeholder = st.empty()
+    access_placeholder = st.empty()
     
-    with st.spinner("Fetching data... "):
-        try:
-            response = requests.get(api_url)
-            response.raise_for_status()
-            result = response.json()
-
-            if isinstance(result, dict) and "data" in result:
-                df = pd.DataFrame(result["data"])
-                return df  # Return DataFrame
-
-            elif isinstance(result, str) and "Run Airflow pipeline" in result:
-                return "not_found"  # Return a string if data isn't available
+    try:
+        # Make single API call
+        loading_placeholder.info("Fetching data from Snowflake... Please wait while we process your request.")
+        response = requests.get(api_url)
+        response.raise_for_status()
+        result = response.json()
+        
+        # Wait without showing countdown
+       
             
-            else:
-                st.error("Unexpected API response format.")
-                return None
-
-        except requests.exceptions.RequestException as e:
-            st.error(f" API request failed: {e}")
-        except Exception as e:
-            st.error(f" An unexpected error occurred: {e}")
-
-    return None
+        # Show completion message
+        access_placeholder.success("✅ Fetching complete! You can now access your data below.")
+            
+        if isinstance(result, dict) and "data" in result:
+            df = pd.DataFrame(result["data"])
+            loading_placeholder.empty()
+            return df
+        
+            
+    except requests.exceptions.RequestException as e:
+        loading_placeholder.error(f"❌ Error fetching data: {str(e)}")
+        return None
 
 # --------- Streamlit UI ---------
 
@@ -51,7 +53,8 @@ with st.sidebar:
     st.write("""
     - **Enter a valid SQL query** to fetch data.
     - **Specify the year, quarter, and schema** to filter data.
-    - If data is unavailable, **trigger Airflow DAG** to process it.
+    - After clicking 'Fetch Data', please wait while we process your request.
+    - Once fetching is complete, you'll see your data displayed below.
     """)
     st.markdown("---")
     st.subheader("🔗 Backend API")
@@ -89,7 +92,7 @@ with st.container():
         with col3:
             schema = st.selectbox(
                 " Schema",
-                ("raw", "json", "nm"),  # Updated dropdown menu
+                ("raw", "json", "dw"),
                 index=0
             )
 
@@ -104,29 +107,22 @@ with st.container():
 
 # -------- Handle Form Submission --------
 if submit:
-    st.info(" Fetching data from Snowflake...")
-    result = call_api(query, year, qtr, schema)
-
-    if result is None:
-        st.error("❌ An error occurred while fetching data.")
-
-    elif isinstance(result, pd.DataFrame):  # If valid data returned
+    # Make single API call and wait
+    result = call_api_once(query, year, qtr, schema)
+    
+    if isinstance(result, pd.DataFrame):
         if not result.empty:
-            st.success("✅ Data Retrieved Successfully!")
+            st.success("📊 Here's your requested data:")
 
             # Apply custom styling for better visibility
             styled_df = result.style.set_properties(**{
-                'background-color': '#f8f9fa',  # Light gray background
-                'color': 'black',  # Text color
-                'border': '1px solid #ddd'  # Light border
+                'background-color': '#f8f9fa',
+                'color': 'black',
+                'border': '1px solid #ddd'
             }).set_table_styles([
-                {'selector': 'thead th', 'props': [('background-color', '#343a40'), ('color', 'white')]}  # Dark header
+                {'selector': 'thead th', 'props': [('background-color', '#343a40'), ('color', 'white')]}
             ])
 
             st.dataframe(styled_df)
-
         else:
             st.warning(f"⚠️ No data found for **Year: {year}, Quarter: {qtr}, Schema: {schema}**.")
-
-    elif result == "not_found":
-        st.warning(f"⚠️ Data for **Year: {year}, Quarter: {qtr}, Schema: {schema}** not found.")
