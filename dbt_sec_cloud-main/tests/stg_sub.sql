@@ -1,0 +1,1 @@
+select * from {{source("raw_source", "sub")}} where filed > current_date() 
