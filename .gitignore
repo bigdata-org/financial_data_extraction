@@ -6,4 +6,4 @@ artifacts
 .venv
 airflow/logs
 prototyping
-dbt_sec_cloud_main/
+dbt_sec_cloud-main/
