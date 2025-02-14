@@ -75,7 +75,6 @@ with DAG(
     )
 
 
-
     check_data_exists >> [upload_data_to_s3, dbt_raw]
     upload_data_to_s3 >> dbt_raw
     dbt_raw >> dbt_denormalize

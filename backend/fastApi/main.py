@@ -31,7 +31,6 @@ def check_data_availibility(year, qtr):
         return True
     return False 
 
-
 # get queried data
 @app.get("/user_query/{query}/{year}/{qtr}/{schema}")
 def user_query(query:str,year, qtr,schema:str):
@@ -48,7 +47,7 @@ def user_query(query:str,year, qtr,schema:str):
 
             df = pd.DataFrame(data, columns=columns)
             df = df.astype(str)  
-            
+                        
             return {"status": "success", "data": df.to_dict(orient='records')}
         else :  
             return f"Run Airflow pipeline for {year} and {qtr}" 

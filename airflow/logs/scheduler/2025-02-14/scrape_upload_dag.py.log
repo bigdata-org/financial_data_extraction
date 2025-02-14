@@ -999,3 +999,430 @@
 [2025-02-14T04:45:23.675+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:45:23.674+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-02-14T04:45:23.694+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:45:23.694+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
 [2025-02-14T04:45:23.717+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.238 seconds
+[2025-02-14T04:45:54.010+0000] {processor.py:186} INFO - Started process (PID=1045) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:45:54.011+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:45:54.014+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:45:54.014+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:45:54.210+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:45:54.231+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:45:54.231+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:45:54.250+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:45:54.250+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:45:54.271+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.266 seconds
+[2025-02-14T04:46:24.330+0000] {processor.py:186} INFO - Started process (PID=1056) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:46:24.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:46:24.333+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:46:24.333+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:46:24.504+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:46:24.530+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:46:24.530+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:46:24.558+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:46:24.558+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:46:24.579+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.255 seconds
+[2025-02-14T04:46:54.689+0000] {processor.py:186} INFO - Started process (PID=1066) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:46:54.690+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:46:54.692+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:46:54.692+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:46:54.855+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:46:54.878+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:46:54.878+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:46:54.903+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:46:54.903+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:46:54.927+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.243 seconds
+[2025-02-14T04:47:25.168+0000] {processor.py:186} INFO - Started process (PID=1077) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:47:25.169+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:47:25.172+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:47:25.171+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:47:25.330+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:47:25.353+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:47:25.353+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:47:25.374+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:47:25.374+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:47:25.392+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.230 seconds
+[2025-02-14T04:47:55.479+0000] {processor.py:186} INFO - Started process (PID=1088) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:47:55.480+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:47:55.482+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:47:55.482+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:47:55.650+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:47:55.672+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:47:55.672+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:47:55.692+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:47:55.691+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:47:55.710+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.237 seconds
+[2025-02-14T04:48:25.784+0000] {processor.py:186} INFO - Started process (PID=1099) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:48:25.785+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:48:25.789+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:48:25.788+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:48:25.971+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:48:25.995+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:48:25.995+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:48:26.023+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:48:26.023+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:48:26.051+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.272 seconds
+[2025-02-14T04:48:56.181+0000] {processor.py:186} INFO - Started process (PID=1110) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:48:56.182+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:48:56.185+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:48:56.185+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:48:56.346+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:48:56.367+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:48:56.367+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:48:56.391+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:48:56.390+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:48:56.410+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.234 seconds
+[2025-02-14T04:49:26.493+0000] {processor.py:186} INFO - Started process (PID=1120) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:49:26.494+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:49:26.496+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:49:26.496+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:49:26.672+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:49:26.693+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:49:26.693+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:49:26.714+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:49:26.714+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:49:26.734+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.247 seconds
+[2025-02-14T04:49:56.874+0000] {processor.py:186} INFO - Started process (PID=1131) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:49:56.875+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:49:56.879+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:49:56.879+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:49:57.074+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:49:57.108+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:49:57.107+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:49:57.137+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:49:57.137+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:49:57.155+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.288 seconds
+[2025-02-14T04:50:27.262+0000] {processor.py:186} INFO - Started process (PID=1142) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:50:27.263+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:50:27.266+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:50:27.265+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:50:27.417+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:50:27.440+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:50:27.439+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:50:27.459+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:50:27.459+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:50:27.478+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.222 seconds
+[2025-02-14T04:50:57.545+0000] {processor.py:186} INFO - Started process (PID=1153) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:50:57.546+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:50:57.550+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:50:57.549+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:50:57.735+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:50:57.759+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:50:57.759+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:50:57.781+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:50:57.781+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:50:57.802+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.272 seconds
+[2025-02-14T04:51:27.982+0000] {processor.py:186} INFO - Started process (PID=1164) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:51:27.984+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:51:27.989+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:51:27.988+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:51:28.177+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:51:28.203+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:51:28.203+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:51:28.228+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:51:28.228+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:51:28.252+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.276 seconds
+[2025-02-14T04:51:58.352+0000] {processor.py:186} INFO - Started process (PID=1175) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:51:58.353+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:51:58.356+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:51:58.355+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:51:58.515+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:51:58.538+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:51:58.538+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:51:58.559+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:51:58.559+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:51:58.580+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.233 seconds
+[2025-02-14T04:52:28.818+0000] {processor.py:186} INFO - Started process (PID=1186) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:52:28.819+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:52:28.821+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:52:28.821+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:52:28.986+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:52:29.016+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:52:29.016+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:52:29.039+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:52:29.039+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:52:29.061+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.249 seconds
+[2025-02-14T04:52:59.157+0000] {processor.py:186} INFO - Started process (PID=1197) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:52:59.158+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:52:59.160+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:52:59.160+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:52:59.315+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:52:59.338+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:52:59.338+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:52:59.357+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:52:59.357+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:52:59.376+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.225 seconds
+[2025-02-14T04:53:29.769+0000] {processor.py:186} INFO - Started process (PID=1208) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:53:29.770+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:53:29.774+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:53:29.773+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:53:29.970+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:53:29.995+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:53:29.994+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:53:30.017+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:53:30.017+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:53:30.036+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.275 seconds
+[2025-02-14T04:54:00.115+0000] {processor.py:186} INFO - Started process (PID=1219) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:54:00.117+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:54:00.120+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:54:00.120+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:54:00.278+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:54:00.301+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:54:00.300+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:54:00.320+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:54:00.320+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:54:00.340+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.230 seconds
+[2025-02-14T04:54:30.409+0000] {processor.py:186} INFO - Started process (PID=1229) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:54:30.410+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:54:30.413+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:54:30.413+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:54:30.575+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:54:30.596+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:54:30.596+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:54:30.617+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:54:30.617+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:54:30.637+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.233 seconds
+[2025-02-14T04:55:00.773+0000] {processor.py:186} INFO - Started process (PID=1240) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:55:00.774+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:55:00.777+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:55:00.777+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:55:00.950+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:55:00.974+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:55:00.973+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:55:00.996+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:55:00.995+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:55:01.017+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.249 seconds
+[2025-02-14T04:55:31.066+0000] {processor.py:186} INFO - Started process (PID=1251) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:55:31.067+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:55:31.069+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:55:31.069+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:55:31.223+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:55:31.245+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:55:31.245+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:55:31.265+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:55:31.264+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:55:31.283+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.224 seconds
+[2025-02-14T04:56:01.572+0000] {processor.py:186} INFO - Started process (PID=1262) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:56:01.573+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:56:01.575+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:56:01.575+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:56:01.761+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:56:01.784+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:56:01.784+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:56:01.804+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:56:01.804+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:56:01.821+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.255 seconds
+[2025-02-14T04:56:31.895+0000] {processor.py:186} INFO - Started process (PID=1272) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:56:31.896+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:56:31.899+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:56:31.898+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:56:32.067+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:56:32.092+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:56:32.091+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:56:32.112+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:56:32.112+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:56:32.134+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.244 seconds
+[2025-02-14T04:57:02.204+0000] {processor.py:186} INFO - Started process (PID=1283) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:57:02.205+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:57:02.208+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:57:02.207+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:57:02.354+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:57:02.376+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:57:02.375+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:57:02.395+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:57:02.395+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:57:02.416+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.217 seconds
+[2025-02-14T04:57:32.642+0000] {processor.py:186} INFO - Started process (PID=1294) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:57:32.643+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:57:32.646+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:57:32.646+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:57:32.800+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:57:32.834+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:57:32.834+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:57:32.859+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:57:32.859+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:57:32.878+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.241 seconds
+[2025-02-14T04:58:02.998+0000] {processor.py:186} INFO - Started process (PID=1306) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:58:02.999+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:58:03.002+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:58:03.002+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:58:03.163+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:58:03.188+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:58:03.188+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:58:03.214+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:58:03.214+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:58:03.235+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.245 seconds
+[2025-02-14T04:58:33.341+0000] {processor.py:186} INFO - Started process (PID=1317) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:58:33.342+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:58:33.345+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:58:33.344+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:58:33.489+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:58:33.513+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:58:33.513+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:58:33.535+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:58:33.534+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:58:33.556+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.221 seconds
+[2025-02-14T04:59:03.674+0000] {processor.py:186} INFO - Started process (PID=1328) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:59:03.677+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:59:03.680+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:59:03.680+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:59:03.881+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:59:03.911+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:59:03.911+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:59:03.940+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:59:03.940+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:59:03.960+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.297 seconds
+[2025-02-14T04:59:34.042+0000] {processor.py:186} INFO - Started process (PID=1339) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:59:34.043+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T04:59:34.045+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:59:34.045+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:59:34.200+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T04:59:34.239+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:59:34.238+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T04:59:34.263+0000] {logging_mixin.py:190} INFO - [2025-02-14T04:59:34.263+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T04:59:34.284+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.248 seconds
+[2025-02-14T05:00:04.335+0000] {processor.py:186} INFO - Started process (PID=1350) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:00:04.336+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:00:04.338+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:00:04.338+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:00:04.482+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:00:04.511+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:00:04.511+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:00:04.533+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:00:04.533+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:00:04.555+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.226 seconds
+[2025-02-14T05:00:34.855+0000] {processor.py:186} INFO - Started process (PID=1362) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:00:34.856+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:00:34.859+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:00:34.859+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:00:34.997+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:00:35.021+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:00:35.020+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:00:35.044+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:00:35.043+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:00:35.071+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.221 seconds
+[2025-02-14T05:01:05.300+0000] {processor.py:186} INFO - Started process (PID=1374) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:01:05.301+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:01:05.304+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:01:05.304+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:01:05.456+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:01:05.478+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:01:05.478+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:01:05.502+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:01:05.502+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:01:05.525+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.231 seconds
+[2025-02-14T05:01:35.621+0000] {processor.py:186} INFO - Started process (PID=1385) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:01:35.622+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:01:35.624+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:01:35.624+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:01:35.793+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:01:35.819+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:01:35.818+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:01:35.845+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:01:35.844+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:01:35.864+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.251 seconds
+[2025-02-14T05:02:06.699+0000] {processor.py:186} INFO - Started process (PID=1396) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:02:06.700+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:02:06.703+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:02:06.703+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:02:06.846+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:02:06.870+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:02:06.870+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:02:06.892+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:02:06.892+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:02:06.913+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.220 seconds
+[2025-02-14T05:02:36.983+0000] {processor.py:186} INFO - Started process (PID=1407) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:02:36.984+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:02:36.987+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:02:36.986+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:02:37.130+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:02:37.154+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:02:37.154+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:02:37.175+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:02:37.175+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:02:37.196+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.219 seconds
+[2025-02-14T05:03:07.297+0000] {processor.py:186} INFO - Started process (PID=1418) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:03:07.298+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:03:07.301+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:03:07.300+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:03:07.445+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:03:07.468+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:03:07.468+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:03:07.490+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:03:07.489+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:03:07.511+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.221 seconds
+[2025-02-14T05:03:38.421+0000] {processor.py:186} INFO - Started process (PID=1435) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:03:38.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:03:38.425+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:03:38.425+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:03:38.571+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:03:38.593+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:03:38.593+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:03:38.614+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:03:38.614+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:03:38.635+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.221 seconds
+[2025-02-14T05:04:08.936+0000] {processor.py:186} INFO - Started process (PID=1445) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:04:08.937+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:04:08.940+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:04:08.940+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:04:09.101+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:04:09.129+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:04:09.128+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:04:09.151+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:04:09.151+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:04:09.173+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.244 seconds
+[2025-02-14T05:04:39.963+0000] {processor.py:186} INFO - Started process (PID=1456) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:04:39.966+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:04:39.973+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:04:39.972+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:04:40.179+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:04:40.209+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:04:40.209+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:04:40.236+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:04:40.236+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:04:40.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.302 seconds
+[2025-02-14T05:05:10.603+0000] {processor.py:186} INFO - Started process (PID=1467) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:05:10.604+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:05:10.606+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:05:10.606+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:05:10.789+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:05:10.820+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:05:10.820+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:05:10.847+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:05:10.847+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:05:10.869+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.272 seconds
+[2025-02-14T05:05:41.650+0000] {processor.py:186} INFO - Started process (PID=1478) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:05:41.651+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:05:41.654+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:05:41.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:05:41.802+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:05:41.827+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:05:41.826+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:05:41.850+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:05:41.850+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:05:41.869+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.225 seconds
+[2025-02-14T05:06:12.017+0000] {processor.py:186} INFO - Started process (PID=1489) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:06:12.019+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:06:12.024+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:06:12.023+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:06:12.305+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:06:12.336+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:06:12.336+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:06:12.362+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:06:12.362+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:06:12.381+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.373 seconds
+[2025-02-14T05:06:43.420+0000] {processor.py:186} INFO - Started process (PID=1501) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:06:43.421+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:06:43.426+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:06:43.425+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:06:43.582+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:06:43.611+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:06:43.611+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:06:43.634+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:06:43.634+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:06:43.656+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.243 seconds
+[2025-02-14T05:07:13.914+0000] {processor.py:186} INFO - Started process (PID=1512) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:07:13.914+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:07:13.917+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:07:13.916+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:07:14.073+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:07:14.098+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:07:14.098+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:07:14.120+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:07:14.120+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:07:14.138+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.232 seconds
+[2025-02-14T05:07:44.484+0000] {processor.py:186} INFO - Started process (PID=1523) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:07:44.485+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:07:44.487+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:07:44.487+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:07:44.639+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:07:44.662+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:07:44.662+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:07:44.684+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:07:44.684+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:07:44.706+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.228 seconds
+[2025-02-14T05:08:15.553+0000] {processor.py:186} INFO - Started process (PID=1534) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:08:15.555+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:08:15.558+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:08:15.558+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:08:15.752+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:08:15.776+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:08:15.776+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:08:15.806+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:08:15.806+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:08:15.834+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.292 seconds
+[2025-02-14T05:08:45.886+0000] {processor.py:186} INFO - Started process (PID=1544) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:08:45.887+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:08:45.891+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:08:45.890+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:08:46.084+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:08:46.109+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:08:46.109+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:08:46.133+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:08:46.133+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:08:46.153+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.273 seconds
+[2025-02-14T05:09:16.416+0000] {processor.py:186} INFO - Started process (PID=1556) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:09:16.417+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:09:16.420+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:09:16.419+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:09:16.559+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:09:16.585+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:09:16.584+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:09:16.606+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:09:16.606+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:09:16.628+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.218 seconds
+[2025-02-14T05:09:46.696+0000] {processor.py:186} INFO - Started process (PID=1567) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:09:46.697+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:09:46.699+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:09:46.699+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:09:46.840+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:09:46.864+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:09:46.864+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:09:46.884+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:09:46.884+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:09:46.904+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.213 seconds
+[2025-02-14T05:10:17.708+0000] {processor.py:186} INFO - Started process (PID=1578) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:10:17.709+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:10:17.711+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:10:17.711+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:10:17.864+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:10:17.886+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:10:17.886+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:10:17.908+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:10:17.908+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:10:17.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.231 seconds
+[2025-02-14T05:10:48.154+0000] {processor.py:186} INFO - Started process (PID=1589) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:10:48.155+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:10:48.158+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:10:48.157+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:10:48.300+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:10:48.323+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:10:48.322+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:10:48.343+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:10:48.343+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:10:48.363+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.216 seconds
+[2025-02-14T05:11:18.501+0000] {processor.py:186} INFO - Started process (PID=1600) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:11:18.503+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:11:18.506+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:11:18.506+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:11:18.730+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:11:18.757+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:11:18.757+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:11:18.784+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:11:18.784+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:11:18.806+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.312 seconds
+[2025-02-14T05:11:49.605+0000] {processor.py:186} INFO - Started process (PID=1611) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:11:49.606+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:11:49.609+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:11:49.609+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:11:49.749+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:11:49.772+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:11:49.772+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:11:49.794+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:11:49.794+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:11:49.818+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.220 seconds
+[2025-02-14T05:12:19.869+0000] {processor.py:186} INFO - Started process (PID=1622) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:12:19.870+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:12:19.873+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:12:19.872+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:12:20.022+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:12:20.046+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:12:20.046+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:12:20.068+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:12:20.067+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:12:20.086+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.223 seconds
+[2025-02-14T05:12:50.197+0000] {processor.py:186} INFO - Started process (PID=1633) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:12:50.198+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:12:50.200+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:12:50.200+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:12:50.339+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:12:50.366+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:12:50.366+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:12:50.393+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:12:50.393+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:12:50.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.226 seconds
+[2025-02-14T05:13:20.541+0000] {processor.py:186} INFO - Started process (PID=1645) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:13:20.542+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:13:20.544+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:13:20.544+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:13:20.682+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:13:20.706+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:13:20.706+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:13:20.729+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:13:20.729+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:13:20.749+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.213 seconds
+[2025-02-14T05:13:51.124+0000] {processor.py:186} INFO - Started process (PID=1656) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:13:51.125+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:13:51.128+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:13:51.127+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:13:51.274+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:13:51.297+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:13:51.297+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:13:51.320+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:13:51.320+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:13:51.344+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.225 seconds
+[2025-02-14T05:14:21.534+0000] {processor.py:186} INFO - Started process (PID=1667) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:14:21.535+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:14:21.538+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:14:21.537+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:14:21.686+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:14:21.711+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:14:21.711+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:14:21.735+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:14:21.735+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:14:21.757+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.229 seconds
+[2025-02-14T05:14:51.882+0000] {processor.py:186} INFO - Started process (PID=1678) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:14:51.883+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:14:51.885+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:14:51.885+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:14:52.055+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:14:52.087+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:14:52.087+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:14:52.112+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:14:52.112+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:14:52.130+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.256 seconds
+[2025-02-14T05:15:23.057+0000] {processor.py:186} INFO - Started process (PID=1689) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:15:23.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:15:23.061+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:15:23.060+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:15:23.212+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:15:23.236+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:15:23.236+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:15:23.263+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:15:23.262+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:15:23.284+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.232 seconds
+[2025-02-14T05:15:53.505+0000] {processor.py:186} INFO - Started process (PID=1700) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:15:53.506+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:15:53.509+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:15:53.508+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:15:53.722+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:15:53.747+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:15:53.747+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:15:53.779+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:15:53.779+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:15:53.801+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.302 seconds
+[2025-02-14T05:16:24.804+0000] {processor.py:186} INFO - Started process (PID=1711) to work on /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:16:24.805+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scrape_upload_dag.py for tasks to queue
+[2025-02-14T05:16:24.808+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:16:24.808+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:16:24.968+0000] {processor.py:925} INFO - DAG(s) 'dag_to_scrape_and_upload' retrieved from /opt/airflow/dags/scrape_upload_dag.py
+[2025-02-14T05:16:24.989+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:16:24.988+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-14T05:16:25.009+0000] {logging_mixin.py:190} INFO - [2025-02-14T05:16:25.009+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_to_scrape_and_upload to 2025-02-14 00:00:00+00:00, run_after=2025-02-15 00:00:00+00:00
+[2025-02-14T05:16:25.030+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scrape_upload_dag.py took 0.232 seconds
