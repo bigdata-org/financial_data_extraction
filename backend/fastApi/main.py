@@ -16,7 +16,6 @@ bucket_name = os.getenv('S3_BUCKET_NAME')
 AIRFLOW_BASE_URL = "http://35.209.89.127:8080/api/v1"  
 USERNAME = os.getenv('AIRFLOW_USERNAME')  
 PASSWORD = os.getenv('AIRFLOW_PASSWORD')  
-# DAG_ID = "dag_to_scrape_metadata" 
 
 def check_data_availibility(year, qtr):
     s3_client = s3.get_s3_client()
@@ -53,10 +52,21 @@ def trigger_dag(dag_id: str, year, qtr):
 
 # get queried data
 @app.get("/user_query/{query}/{year}/{qtr}/{schema}")
-def user_query(query:str,year, qtr,schema:str):
+def user_query(query:str,year:str, qtr:str,schema:str):
     try:
-        if check_data_availibility(year, qtr):
-            cur = conn.cursor()
+        check_sf = {
+            "raw" : f"select nvl(count(adsh),0) data from raw.sub where year(filed)={year} and quarter(filed)={qtr};",
+            "json":f"select nvl(count(data_hash),0) as data from json.sub where year(data:FILED::date)={year} and quarter(data:FILED::date)={qtr};",
+            "dw" : f"select count(fct_bs_sk) as data from dw.fact_balance_sheet where year(filing_date)={year} and quarter(filing_date)={qtr};"
+        }
+
+        cur = conn.cursor()
+        sf_response = cur.execute(check_sf[schema.lower()])
+        result = sf_response.fetchall()
+        df = pd.DataFrame(result)
+        data = df.iloc[0, 0]
+        
+        if data > 0 :
             limit_query = query + " Limit 100" 
             cur.execute(f"USE SCHEMA {conn.database}.{schema}")
             cur.execute(limit_query)
@@ -67,7 +77,7 @@ def user_query(query:str,year, qtr,schema:str):
             df = pd.DataFrame(data, columns=columns)
             df = df.astype(str)  
 
-            return {"status": "success", "data": df.to_dict(orient='records')}
+            return {"status": "success", "data": df.to_dict(orient='records')}           
         else : 
             taskname = schema.lower()
             task_dict = {
