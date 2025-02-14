@@ -63,7 +63,7 @@ def user_query(query:str,year, qtr,schema:str):
 @app.post("/trigger_dag/{dag_id}/{year}/{qtr}")
 def trigger_dag(dag_id: str, year, qtr):
 
-    url = f"{AIRFLOW_BASE_URL}/dags/{dag_id}/dagRuns"
+    url = f"{AIRFLOW_BASE_URL}/dags/{dag_id}/dagRuns"   
     response = requests.post(
         url,
         auth=(USERNAME, PASSWORD),

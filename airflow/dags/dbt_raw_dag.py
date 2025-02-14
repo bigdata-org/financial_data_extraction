@@ -21,9 +21,8 @@ with DAG(
             'year' : '2024',
             'qtr'  : '1'
         }  
-
     )
-
+    
     upload_data_to_s3 = PythonOperator(
         task_id='Upload_data_to_s3',
         python_callable=store_data_to_s3,
@@ -50,7 +49,7 @@ with DAG(
         'year': '{{ task_instance.xcom_pull(key="year") }}',
         'qtr': '{{ task_instance.xcom_pull(key="qtr") }}'
     },
-    trigger_rule = 'one_success'    
+    trigger_rule = 'all_success'    
     )
 
 

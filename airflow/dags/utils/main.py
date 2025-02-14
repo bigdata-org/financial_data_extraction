@@ -105,8 +105,8 @@ def store_data_to_s3(**context):
 
             config = TransferConfig(
                             multipart_threshold=8 * 1024* 1024,
-                            max_concurrency=5,
-                            multipart_chunksize=8 * 1024* 1024,
+                            max_concurrency=10,
+                            multipart_chunksize=64 * 1024* 1024,
                             use_threads=True
                             )
 
