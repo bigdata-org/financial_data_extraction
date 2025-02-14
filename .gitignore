@@ -1,0 +1,8 @@
+.streamlit-venv
+.fastapi-venv
+__pycache__
+artifacts
+.env
+.venv
+airflow/logs
+prototyping
