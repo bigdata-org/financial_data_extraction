@@ -1,0 +1,36 @@
+
+version: 2
+
+models:
+  - name: json_num
+    columns:
+      - name: DATA
+        tests:
+          - not_null
+
+  - name: json_pre
+    columns:
+      - name: DATA
+        tests:
+          - not_null
+
+  - name: json_tag
+    columns:
+      - name: DATA
+        tests:
+          - not_null
+
+  - name: json_sub
+    columns:
+      - name: DATA
+        tests:
+          - not_null
+sources:
+  - name: 'raw_source'
+    database: sec
+    schema: raw
+    tables:
+      - name: pre
+      - name: sub
+      - name: num
+      - name: tag

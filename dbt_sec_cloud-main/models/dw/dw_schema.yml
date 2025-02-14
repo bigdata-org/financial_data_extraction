@@ -1,0 +1,120 @@
+
+version: 2
+
+sources:
+  - name: 'dw_source'
+    database: sec
+    schema: dw
+    tables:
+      - name: dim_company
+      - name: dim_tag
+
+models:
+  - name: DIM_TAG
+    columns:
+      - name: tag
+        tests:
+          - not_null
+      - name: version
+        tests:
+          - not_null
+      - name: tag_sk
+        tests:
+          - not_null 
+          - unique     
+
+  - name: DIM_COMPANY
+    columns:
+      - name: cik
+        tests:
+          - not_null
+          - unique
+      - name: name
+        tests:
+          - not_null
+          - unique
+      - name: company_sk
+        tests:
+          - not_null 
+          - unique
+
+  - name: FACT_BALANCE_SHEET
+    columns:
+      - name: fiscal_year
+        tests:
+          - not_null
+      - name: fiscal_period
+        tests:
+          - not_null
+      - name: company_name
+        tests:
+          - not_null    
+      - name: company_sk
+        tests:
+          - relationships:
+              to: ref('DIM_COMPANY')
+              field: company_sk
+          - not_null
+      - name: tag_sk
+        tests:
+          - relationships:
+              to: ref('DIM_TAG')
+              field: tag_sk
+      - name: fct_bs_sk
+        tests:
+          - not_null 
+          - unique
+
+  - name: FACT_INCOME_STATEMENT
+    columns:
+      - name: fiscal_year
+        tests:
+          - not_null
+      - name: fiscal_period
+        tests:
+          - not_null
+      - name: company_name
+        tests:
+          - not_null    
+      - name: company_sk
+        tests:
+          - relationships:
+              to: ref('DIM_COMPANY')
+              field: company_sk
+          - not_null
+      - name: tag_sk
+        tests:
+          - relationships:
+              to: ref('DIM_TAG')
+              field: tag_sk
+      - name: fct_is_sk
+        tests:
+          - not_null 
+          - unique
+
+  - name: FACT_CASH_FLOW
+    columns:
+      - name: fiscal_year
+        tests:
+          - not_null
+      - name: fiscal_period
+        tests:
+          - not_null
+      - name: company_name
+        tests:
+          - not_null    
+      - name: company_sk
+        tests:
+          - relationships:
+              to: ref('DIM_COMPANY')
+              field: company_sk
+          - not_null
+      - name: tag_sk
+        tests:
+          - relationships:
+              to: ref('DIM_TAG')
+              field: tag_sk
+      - name: fct_cf_sk
+        tests:
+          - not_null 
+          - unique

@@ -1,0 +1,50 @@
+
+version: 2
+
+models:
+  - name: num
+    columns:
+      - name: ADSH
+        tests:
+          - not_null
+
+  - name: pre
+    columns:
+      - name: ADSH
+        tests:
+          - not_null
+
+  - name: tag
+    columns:
+      - name: tag
+        tests:
+          - not_null
+      - name: version
+        tests:
+          - not_null
+
+  - name: sub
+    columns:
+      - name: ADSH
+        tests:
+          - not_null
+          - unique
+      - name: CIK
+        tests:
+          - not_null
+      - name: NAME
+        tests:
+          - not_null
+      - name: FY
+        tests:
+          - not_null
+      - name: FP
+        tests:
+          - not_null
+sources:
+  - name: 'stage_source'
+    database: sec
+    schema: tanmay
+    tables:
+      - name: sec_ext_table
+
