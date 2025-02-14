@@ -3,7 +3,7 @@
 
 Findata Inc. is developing a comprehensive master financial statement database to enable better and faster fundamental analysis of US public companies. This project covers everything from data scraping and schema design to building robust ETL pipelines and data validation workflows.
 
-Streamlit url = 
+
 Api url = https://fastapi-service-476858206005.us-central1.run.app/docs
 
 
@@ -27,6 +27,45 @@ Api url = https://fastapi-service-476858206005.us-central1.run.app/docs
 - **FastAPI:** Backend API connectivity to Snowflake.
 - **SQLAlchemy & Snowflake SQL:** Querying and interacting with Snowflake data.
 
+
+## Tasks and Implementation Details
+
+### Data Design
+
+- **Web Scraping:**  
+  Develop a script to scrape and extract all dataset links from the SEC Markets Data page.
+- **Format Review:**  
+  Analyze the formatting provided in the SEC Financial Statement Data document to guide downstream data ingestion.
+
+### Data Storage Design
+
+Three primary approaches are evaluated:
+
+- **Raw Staging:**  
+  Store data exactly as received to maintain complete audit trails and original data fidelity.
+
+- **JSON Transformation:**  
+  Use a methodology (e.g., a custom converter akin to SecFinancialStatementConverter) to denormalize data into JSON format. This approach is geared towards faster data access in Snowflake.
+
+- **Denormalized Fact Tables:**  
+  Transform and aggregate SEC financial statement data into three fact tables (Balance Sheet, Income Statement, and Cash Flow) with company identifiers (ticker, CIK), period identifiers (filing date, fiscal year, fiscal period), and key numeric fields.
+
+
+### Operational Pipeline with Airflow
+
+- **Pipeline Design:**  
+  Three Airflow pipelines have been designed to handle data validation, staging, and processing.
+  
+- **Job Definitions:**  
+  Each pipeline is configurable via a job definition file that includes:
+  - Data period (year and quarter)
+  - Specific validation checks
+  - Staging areas (input/output on S3)
+  - Essential configurations (S3 and Snowflake credentials)
+  - Processing methodology (JSON vs. RDBMS)
+  
+- **Execution:**  
+  The pipelines are designed to process dynamic datasets (e.g., Q4202{Your Team Number}) and are extensible across any year/quarter datasets.
 
 ## Getting Started
 1. Clone the repository.
