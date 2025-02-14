@@ -4,6 +4,7 @@
 Findata Inc. is developing a comprehensive master financial statement database to enable better and faster fundamental analysis of US public companies. This project covers everything from data scraping and schema design to building robust ETL pipelines and data validation workflows.
 
 Streamlit-ui url :https://financialdataextraction-x6hyxmt6gn95nmzkeeegca.streamlit.app/
+
 Api url : https://fastapi-service-476858206005.us-central1.run.app/docs
 
 
