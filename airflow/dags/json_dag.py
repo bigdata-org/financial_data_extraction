@@ -52,7 +52,7 @@ with DAG(
         'year': '{{ task_instance.xcom_pull(key="year") }}',
         'qtr': '{{ task_instance.xcom_pull(key="qtr") }}'
         },
-        trigger_rule = 'one_success'
+        trigger_rule = 'none_failed_min_one_success'
     )
 
     dbt_json = BashOperator(
@@ -68,10 +68,9 @@ with DAG(
             ]
         }'
         """,
-        trigger_rule = 'all_success'
+       trigger_rule = 'none_failed_min_one_success'
     )
 
-    
 
     check_data_exists >> [upload_data_to_s3, dbt_raw]
     upload_data_to_s3  >> dbt_raw

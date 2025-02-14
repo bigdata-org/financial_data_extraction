@@ -54,7 +54,7 @@ with DAG(
         'qtr': '{{ task_instance.xcom_pull(key="qtr") }}'
     },
 
-    trigger_rule = 'all_success'   
+    trigger_rule = 'none_failed_min_one_success'
 
     )
 
@@ -71,8 +71,9 @@ with DAG(
         ]
     }' 
           """,
-    trigger_rule = 'all_success'
+    trigger_rule = 'none_failed_min_one_success'
     )
+
 
 
     check_data_exists >> [upload_data_to_s3, dbt_raw]
