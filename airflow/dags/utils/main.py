@@ -113,10 +113,12 @@ def store_data_to_s3(**context):
             with zipfile.ZipFile(zip_buffer, 'r') as zip:
                 for file_name in zip.namelist():
                    with zip.open(file_name) as file_obj:
+                    bytes_data = file_obj.read()
+                    cleaned_data = bytes_data.replace(b"\\", b"")  # Remove backslashes
                     s3_key = f"{temp_folder}{file_name.split('.')[0]}.tsv"
-                 
+                    cleaned_file_obj = BytesIO(cleaned_data)
                     s3_client.upload_fileobj(
-                        Fileobj =file_obj,
+                        Fileobj =cleaned_file_obj,
                         Bucket = bucket_name,
                         Key = s3_key,
                         Config = config
