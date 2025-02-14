@@ -13,7 +13,7 @@ app = FastAPI()
 bucket_name = os.getenv('S3_BUCKET_NAME')
 
 # Airflow API Configuration
-AIRFLOW_BASE_URL = "http://localhost:8081/api/v1"  
+AIRFLOW_BASE_URL = "http://35.209.89.127:8080/api/v1"  
 USERNAME = os.getenv('AIRFLOW_USERNAME')  
 PASSWORD = os.getenv('AIRFLOW_PASSWORD')  
 # DAG_ID = "dag_to_scrape_metadata" 
@@ -31,35 +31,7 @@ def check_data_availibility(year, qtr):
         return True
     return False 
 
-# get queried data
-@app.get("/user_query/{query}/{year}/{qtr}/{schema}")
-def user_query(query:str,year, qtr,schema:str):
-    try:
-        if check_data_availibility(year, qtr):
-            cur = conn.cursor()
-            limit_query = query + " Limit 100" 
-            cur.execute(f"USE SCHEMA {conn.database}.{schema}")
-            cur.execute(limit_query)
-            
-            print(limit_query)
-            columns = [desc[0] for desc in cur.description]
-            data = cur.fetchall()
 
-            df = pd.DataFrame(data, columns=columns)
-            df = df.astype(str)  
-                        
-            return {"status": "success", "data": df.to_dict(orient='records')}
-        else :  
-            return f"Run Airflow pipeline for {year} and {qtr}" 
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
-    finally:
-        # Close cursor after use
-        if 'cur' in locals():
-            cur.close()
-
-
-@app.post("/trigger_dag/{dag_id}/{year}/{qtr}")
 def trigger_dag(dag_id: str, year, qtr):
 
     url = f"{AIRFLOW_BASE_URL}/dags/{dag_id}/dagRuns"   
@@ -79,5 +51,43 @@ def trigger_dag(dag_id: str, year, qtr):
     else:
         raise Exception 
 
+# get queried data
+@app.get("/user_query/{query}/{year}/{qtr}/{schema}")
+def user_query(query:str,year, qtr,schema:str):
+    try:
+        if check_data_availibility(year, qtr):
+            cur = conn.cursor()
+            limit_query = query + " Limit 100" 
+            cur.execute(f"USE SCHEMA {conn.database}.{schema}")
+            cur.execute(limit_query)
+            
+            columns = [desc[0] for desc in cur.description]
+            data = cur.fetchall()
+
+            df = pd.DataFrame(data, columns=columns)
+            df = df.astype(str)  
+
+            return {"status": "success", "data": df.to_dict(orient='records')}
+        else : 
+            taskname = schema.lower()
+            task_dict = {
+                "raw" : "dag_for_dbt_raw",
+                "json":"dag_for_dbt_json",
+                "dw" :"dag_for_dbt_denormalize"
+            }
+            
+            resposne = trigger_dag(task_dict[taskname],year,qtr)
+            # return f"Run Airflow pipeline for {year} and {qtr}" 
+            return resposne
+
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+    finally:
+        # Close cursor after use
+        if 'cur' in locals():
+            cur.close()
+
+
+
 # if __name__ == "__main__":
-#     uvicorn.run("main:app", host="127.0.0.1", port=8081, reload=True)
+#     uvicorn.run("main:app", host="127.0.0.1", port=8082, reload=True)
