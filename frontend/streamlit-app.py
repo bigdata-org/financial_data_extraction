@@ -17,23 +17,19 @@ def call_api_once(query, year, qtr, schema):
         loading_placeholder.info("Fetching data from Snowflake... Please wait while we process your request.")
         response = requests.get(api_url)
         response.raise_for_status()
-        result = response.json()
-        
-        # Wait without showing countdown
-       
-            
+        result = response.json()   
         # Show completion message
-        access_placeholder.success("✅ Fetching complete! You can now access your data below.")
-            
         if isinstance(result, dict) and "data" in result:
             df = pd.DataFrame(result["data"])
             loading_placeholder.empty()
             return df
         
-            
-    except requests.exceptions.RequestException as e:
+        if isinstance(result, dict) and "status" in result:
+            if result["status"]=="error":
+                raise Exception(result["message"])
+        
+    except Exception as e:
         loading_placeholder.error(f"❌ Error fetching data: {str(e)}")
-        return None
 
 # --------- Streamlit UI ---------
 
