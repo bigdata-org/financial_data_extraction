@@ -50,7 +50,7 @@ with DAG(
         'year': '{{ task_instance.xcom_pull(key="year") }}',
         'qtr': '{{ task_instance.xcom_pull(key="qtr") }}'
     },
-    trigger_rule = 'one_success'    
+    trigger_rule = 'all_success'    
     )
 
 
