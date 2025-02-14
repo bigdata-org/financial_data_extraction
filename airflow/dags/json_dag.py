@@ -71,7 +71,7 @@ with DAG(
        trigger_rule = 'none_failed_min_one_success'
     )
 
-
+    
     check_data_exists >> [upload_data_to_s3, dbt_raw]
     upload_data_to_s3  >> dbt_raw
     dbt_raw >> dbt_json
