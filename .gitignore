@@ -5,4 +5,4 @@ artifacts
 .env
 .venv
 airflow/logs
-prototyping/num.txt
+prototyping
