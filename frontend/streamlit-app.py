@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 # FastAPI Backend URL
-API_BASE_URL = "https://fastapi-service-476858206005.us-central1.run.app"
+API_BASE_URL = "https://fastapi-sec-476858206005.us-central1.run.app"
 
 # Function to fetch data from FastAPI with single attempt
 def call_api_once(query, year, qtr, schema):
