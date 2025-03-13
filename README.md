@@ -5,7 +5,9 @@ Findata Inc. is developing a comprehensive master financial statement database t
 
 Streamlit-ui url :https://financialdataextraction-x6hyxmt6gn95nmzkeeegca.streamlit.app/
 
-Api url : https://fastapi-service-476858206005.us-central1.run.app/docs
+Api url :https://fastapi-sec-476858206005.us-central1.run.app
+
+Airflow : http://34.31.232.10:8000
 
 
 
